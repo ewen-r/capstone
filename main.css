@@ -12,6 +12,10 @@ h2 {
   color: white;
 }
 
+h1 {
+  text-transform: uppercase;
+}
+
 h2 {
   background-color: #35A29F;
 }

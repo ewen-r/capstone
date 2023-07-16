@@ -3,6 +3,7 @@ html {
 }
 
 img {
+  border: 3px solid grey;
   width: 90%;
   margin-left: 5%;
 }
