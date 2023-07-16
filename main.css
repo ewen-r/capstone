@@ -1,4 +1,3 @@
-
 /* https://colorhunt.co/palette/0719520b666a35a29f97feed */
 
 html {
@@ -21,12 +20,28 @@ h2 {
 }
 
 footer {
-  padding-left: 4px;
   background-color: #35A29F;
+  color: white;
+  padding-left: 4px;
+  text-align: center;
+}
+
+.footerDiv,
+footer div {
+  display: flex;
+  gap: 16px;
+  padding: 4px;
+  text-align: center;
+}
+
+.footerDiv a,
+footer div a {
   color: white;
 }
 
-p.copyright {
-  font-size: small;
+.footerCopyright,
+footer p.copyright {
   text-align: center;
+  font-size: small;
+  padding-bottom: 4px;
 }
