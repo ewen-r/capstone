@@ -1,6 +1,7 @@
 /* https://colorhunt.co/palette/0719520b666a35a29f97feed */
 
 html {
+  margin: 8px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -20,7 +21,7 @@ h2 {
 }
 
 footer {
-  background-color: #35A29F;
+  background-color: #0B666A;
   color: white;
   padding-left: 4px;
   text-align: center;
@@ -30,7 +31,7 @@ footer {
 footer div {
   display: flex;
   justify-content: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-content: space-around;
   gap: 16px;
   padding: 4px;
