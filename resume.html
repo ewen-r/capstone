@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Resume</title>
+</head>
+
+<style>
+  .skillIcon {
+    height: 2rem;
+    display: inline-block;
+  }
+
+  footer {
+    background-color: #0B666A;
+    color: white;
+    padding-left: 4px;
+    text-align: center;
+  }
+
+  .footerDiv,
+  footer div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+    padding: 4px;
+    text-align: center;
+  }
+
+  .footerDiv a,
+  footer div a {
+    color: white;
+  }
+
+  .footerCopyright,
+  footer p.copyright {
+    text-align: center;
+    font-size: small;
+    padding-bottom: 4px;
+  }
+
+  .historyLi {
+    padding-left: 22px;
+    text-indent: -22px;
+  }
+</style>
+
+
+<body id="pageStart">
+
+  <!-- Nav-bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- Main logo and home button -->
+      <a class="navbar-brand" href="index.html">
+        <img src="./assets/icons/dice-1.svg" alt="logo" width="30" height="30"></a>
+
+      <!-- Hamburger menu button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Hamburger menu items -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Resume -->
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">
+              <img src="./assets/icons/person-lines-fill.svg" alt="home logo" width="16" height="16"> Resume</a>
+          </li>
+
+          <!-- Just me drop-down -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="./assets/icons/person-hearts.svg" alt="home logo" width="16" height="16">
+              Just me
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./hobbiesAndHomeLife.html">Hobbies and Home LIfe</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="mediaLibraryBooks.html">
+                  <img src="./assets/icons/book.svg" alt="home logo" width="16" height="16">
+                  Books</a></li>
+              <li><a class="dropdown-item" href="mediaLibraryMoviesAndTvShows.html">
+                  <img src="./assets/icons/film.svg" alt="home logo" width="16" height="16">
+                  Movies and TV shows</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Photo and summary -->
+  <div class=" px-4 my-5 text-center" id="PhotoSummary">
+    <h1 class="display-5 fw-bold text-body-emphasis">Resume: Ewen Reynolds</h1>
+    <img class="d-block mx-auto mb-2" src="./assets/images/profilePhoto01.jpg" alt="" height="250">
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Good morning, good afternoon and welcome...</p>
+      <p class="lead mb-4">
+        My name is Ewen Reynolds and I have worked in Software Engineering for 20+ years in many areas and
+        using many different technologies.<br />
+        My most recent role is as a front-end developer on an application for managing Passive Optical Network devices.<br />
+        I am extremely adaptable and have been relied upon to pick up new technologies/languages on an as-needed
+        basis.<br />I am used to working in a team as well as on solo projects.
+      </p>
+      <p class="lead mb-4">Thank you for taking the time to look at my skills, career history, achievements and
+        qualifications.</p>
+    </div>
+  </div>
+
+
+  <!-- Key Skills -->
+  <div class="container px-4" id="KeySkills">
+    <h2 class="pb-2 border-bottom">Key Skills</h2>
+
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4 py-2">
+
+      <div class="col d-flex align-items-start">
+        <img src="assets/icons/laptop.svg" class="bi text-body-secondary flex-shrink-0 me-2 skillIcon" alt="skillIcon">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Front-End Web Application Development</h3>
+          <p>Javascript / Typescript, HTML, CSS. Angular, Material design, Node </p>
+        </div>
+      </div>
+
+      <div class="col d-flex align-items-start">
+        <img src="assets/icons/motherboard.svg" class="bi text-body-secondary flex-shrink-0 me-2 skillIcon"
+          alt="skillIcon">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Embedded / Real-Time Systems</h3>
+          <p>C and C++, Debugging</p>
+        </div>
+      </div>
+
+      <div class="col d-flex align-items-start">
+        <img src="assets/icons/braces.svg" class="bi text-body-secondary flex-shrink-0 me-2 skillIcon" alt="skillIcon">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Software Development</h3>
+          <p>Visual Studio Code, Sonarqube, ES-Lint, Git</p>
+        </div>
+      </div>
+
+      <div class="col d-flex align-items-start">
+        <img src="assets/icons/arrow-up-square.svg" class="bi text-body-secondary flex-shrink-0 me-2 skillIcon"
+          alt="skillIcon">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Continuous Integration and SW Deployment</h3>
+          <p>Jenkins, Docker, Kubernetes</p>
+        </div>
+      </div>
+
+      <div class="col d-flex align-items-start">
+        <img src="assets/icons/plus-square.svg" class="bi text-body-secondary flex-shrink-0 me-2 skillIcon"
+          alt="skillIcon">
+        <div>
+          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Plus...</h3>
+          <p>Experience with other languages and frameworks on an as needed basis: e.g. Python and BASH scripting,
+            SQL etc.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Career History -->
+  <div class="container px-4 my-3" id="CareerHistory">
+    <h2 class="pb-2 border-bottom">Career History</h2>
+
+    <h2 class="mb-0 fs-6 text-body-emphasis">COMMSCOPE: Senior Software Engineer (2001-present)</h2>
+    <div class="col d-flex align-items-start">
+      <ul>
+        <li class="historyLi">
+          Developing hardware and automated hardware test systems in C and assembly language for broadband wireless
+          products.</li>
+        <li class="historyLi">
+          Software design and development from board bring-up and rapid early development, through to product
+          launch.<br />
+          Primarily using C and assembly language.</li>
+        <li class="historyLi">
+          Post launch software support for maintenance and new features on Set-Top-Box products.<br />
+          Primarily using C with CVS and Subversion software version control tools.</li>
+        <li class="historyLi">
+          Linux based server applications for Digital Rights Management (DRM) using C, C++,
+          Java, Redis, SQL, Python and incorporating automated software test flow with tools
+          including Jenkins, Robot Framework.</li>
+        <li class="historyLi">
+          Design, development and documentation of web applications (Front-End) for managing
+          Hybrid Fibre and Passive Optical Network devices.</li>
+        <li class="historyLi">
+          Working closely with back-end API developers and interfacing with these services
+          (Swagger, REST) to achieve desired functionality.</li>
+        </li>
+        <li class="historyLi">
+          Software component design and documentation using UML design and Confluence.</li>
+        <li class="historyLi">
+          Software development issue tracking using JIRA.</li>
+        <li class="historyLi">
+          Software coding including HTML, CSS, Javascript/Typescript using Node, Angular,
+          Material-Design and other bespoke, in-house frameworks.</li>
+        <li class="historyLi">
+          Use of code integrity and analysis tools within VS Code including ES-Lint and
+          Sonarqube.</li>
+        <li class="historyLi">
+          Source code version management using Git.</li>
+        <li class="historyLi">
+          Peer-review of code using Atlassian tools for Pull Request submission and review.</li>
+        <li class="historyLi">
+          Continuous project delivery cycles using a collaborative Agile/Scrum approach with 2-3
+          week Sprint cycles.</li>
+        <li class="historyLi">
+          Mentoring and providing technical assistance to other engineers in the local and wider
+          teams.</li>
+        <li class="historyLi">
+          Development of data driven tests using mocked services and automated test and
+          Continuous Integration (CI) frameworks with Jenkins.</li>
+        <li class="historyLi">
+          Maintenance of local development server installations with Docker and Kubernetes.</li>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Key Achievements -->
+  <div class="container px-4 my-5" id="KeyAchievements">
+    <h2 class="pb-2 border-bottom">Key Achievements</h2>
+
+    <div class="col d-flex align-items-start">
+      <ul>
+        <li class="historyLi">
+          First deployment for company into the US market with a digital cable set-top box product.
+        </li>
+        <li class="historyLi">
+          Rebranding of Telewest set-top box software to Virgin Media.</li>
+        <li class="historyLi">
+          Development of first commercial product multiplexing digital satellite services for multi-
+          dwelling applications.</li>
+        <li class="historyLi">
+          Primary engineer involved in defining working frameworks and guidelines at the outset
+          of our current web-application product.</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Qualifications -->
+  <div class="container px-4 my-5" id="Qualifications">
+    <h2 class="pb-2 border-bottom">Qualifications</h2>
+
+    <div class="col d-flex align-items-start">
+      <ul>
+        <li class="historyLi">
+          O and A’ Level qualifications in English, sciences and mathematics.</li>
+        <li class="historyLi">
+          97-00 Perth College: HND Mechatronics.</li>
+        <li class="historyLi">
+          99-01 University of Edinburgh: BEng (Hons) 1st Class in Electronics and Electrical Engineering.</li>
+        <li class="historyLi">
+          Continuously adding to my skill-set via Udemy and online sources.</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Activities -->
+  <div class="container px-4 my-5" id="Activities">
+    <h2 class="pb-2 border-bottom">Activities And Interests</h2>
+
+    <div class="col d-flex align-items-start">
+      <div>
+        <p>
+          I am a proud father to my amazing daughter Adelaide and a devoted husband to my fantastic
+          wife Kay. Together with our border collie Bonnie, we make one very special family. During my
+          spare time I enjoy recreational golf, reading, eating out and quiet movie nights at home.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+
+<footer>
+  <div class="footerDiv">
+    <a href="#pageStart">Jump To Top Of Page</a>
+  </div>
+  <p class="footerCopyright">Copyright 2023 Ewen Reynolds all rights reserved</p>
+</footer>
+
+</html>
