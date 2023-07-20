@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./assets/icons/balloon.svg">
+  <!-- Include Bootstrap css from CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="./main.css" rel="stylesheet" />
   <title>playground_bootstrap</title>
 </head>
 
@@ -14,12 +17,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vw;
+    margin: 50px;
   }
 </style>
 
 
 <body id="body">
+
   <!-- Nav-bar -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -54,13 +58,13 @@
 
   <!-- Card -->
   <div class="flex-container">
-    <div class="card" style="width: 18rem;">
-      <img src="./assets/images/backdrop01.jpg" class="card-img-top" alt="card image">
+    <div class="card" style="width: 50vw;">
+      <img src="./assets/images/backdrop02.jpg" class="card-img-top" alt="card image">
       <div class="card-body">
         <h5 class="card-title">Bootstrap playground</h5>
         <p class="card-text">
           Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="https://getbootstrap.com" class="btn btn-primary">getbootstrap.com</a>
       </div>
     </div>
   </div>
