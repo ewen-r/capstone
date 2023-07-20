@@ -9,8 +9,8 @@ function roll() {
   const dice2Element = document.getElementById("dice2");
 
   // Set images.
-  dice1Element.setAttribute("src", './playground_assets/dice' + dice1 + '.png');
-  dice2Element.setAttribute("src", './playground_assets/dice' + dice2 + '.png');
+  dice1Element.setAttribute("src", './assets/images/dice' + dice1 + '.png');
+  dice2Element.setAttribute("src", './assets/images/dice' + dice2 + '.png');
 
   // Calculate and display result message.
   if (dice1 > dice2) {
