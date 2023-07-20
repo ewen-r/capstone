@@ -20,11 +20,13 @@
 
 .mediaImage {
   border: 3px solid black;
-  height: 300px;
-  width: 200px;
+  height: 200px;
   float: left;
   margin: 8px;
-  margin-top: 0px;
+}
+
+.mediaImage:hover {
+  transform: scale(150%);
 }
 
 .mediaText {
