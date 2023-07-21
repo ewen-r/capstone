@@ -17,6 +17,12 @@ body {
   font-size: 0.9rem;
 }
 
+.box {
+  border: 2px solid orange;
+  padding: 8px;
+  /* max-width: auto; */
+  min-height: 30px;
+}
 
 .container {
   display: grid;
@@ -50,4 +56,9 @@ body {
 
 .yellow {
   background-color: yellow;
+}
+
+
+.fail {
+  background-color: firebrick;
 }

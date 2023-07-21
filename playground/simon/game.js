@@ -7,6 +7,15 @@ buttonColors = [
   "red",
   "blue"
 ];
+
+congratsMsgs = [
+  "Here we go!",
+  "Keep going!",
+  "Wow! You're doing great.",
+  "Fantastic",
+  "Awesome"
+];
+
 gameSequence = [];
 startedGame = false;
 playingSequence = false;
@@ -23,21 +32,34 @@ timer = null;
   * - Play the sequence.
 */
 function UpdateGameSequence() {
-  // Increment game level.
-  level++;
 
-  // Reset sequence check index.
-  checkIndex = 0;
+  /* Use a timer to give the user a little breathing space before 
+   the game actually starts. */
+  timer = setTimeout(() => {
+    // Increment game level.
+    level++;
 
-  // Push another color onto the gameSequence array.
-  const num = Math.floor(Math.random() * 4);
-  $("#level-title").text("Level " + level);
-  $("#msgBottom").text("");
-  const newColor = buttonColors[num];
-  gameSequence.push(newColor);
+    // Reset sequence check index.
+    checkIndex = 0;
 
-  // Play the sequence.
-  playSequence();
+    // Push another color onto the gameSequence array.
+    const num = Math.floor(Math.random() * 4);
+    // $("#level-title").text("Level " + level);
+    $("#msgBottom").text("Level " + level);
+    const newColor = buttonColors[num];
+    gameSequence.push(newColor);
+
+    // Show a congratulations message every few levels.
+    congratsLevel = Math.floor(level / 2);
+    if (congratsLevel > congratsMsgs.length) {
+      congratsLevel = 0;
+    }
+    $("#msgTop").text(congratsMsgs[congratsLevel]);
+
+    // Play the sequence.
+    playSequence();
+  }, 1000);
+
 };
 
 
@@ -50,7 +72,7 @@ function playSequence() {
   playingSequence = true;
   // Call timer to handle a new event every 1 second.
   playIndex = 0;
-  timer = setInterval(timerHandler, 1000);
+  timer = setInterval(timerHandler, 700);
 }
 
 
@@ -124,23 +146,30 @@ function checkUserButtonAgainstSequence(b) {
 /** Game Over.
   * - Show consolation messages.
   * - Play a sad sound.
-  * - Reset the game.
+  * - Flash screen background.
+  * - Reset the games started flag.
   * @param {string} c user clicked color e.g "red".
 */
 function gameOver(c) {
   console.log("WRONG.. expected" + c);
 
   // Show consolation messages
-  $("#level-title").text("Hard luck.. ");
-  $("#msgTop").text("You got to level " + level + ", but you should have clicked " + c);
-  $("#msgBottom").text("Press A Key To Try Again");
+  $("#msgTop").text("Doh! You should have clicked " + c);
+  $("#msgBottom").text("Press A Key or Click Here To Try Again");
 
   // Play a sad sound.
   const audio = new Audio('./sounds/wrong.mp3');
   audio.play();
 
-  // Reset the game.
-  resetGame();
+  // Flash screen background.
+  $("body").addClass("fail");
+  setTimeout(
+    () => {
+      $("body").removeClass("fail");
+
+    }, 300);
+
+  startedGame = false;
 }
 
 
@@ -148,11 +177,22 @@ function gameOver(c) {
   * - Reset game level to 0.
   * - Reset game started flag.
   * - Reset game sequence.
+  * - Reset game messages.
 */
 function resetGame() {
   level = 0;
   startedGame = false;
   gameSequence = [];
+  $("#msgTop").text("How far can you go?");
+  $("#msgBottom").text("Ready...");
+}
+
+/** Start the game.
+*/
+function startGame() {
+  resetGame();
+  startedGame = true;
+  UpdateGameSequence();
 }
 
 
@@ -162,27 +202,45 @@ function resetGame() {
 console.log("game.js is running");
 
 
-// Register an event handler for key presses.
+
+/* Register an event handler for key presses.
+ * - Ignore events when game is started...
+ * - Otherwise... Start the game.
+*/
 $("body").keypress(
   (e) => {
     // Ignore if game is already started.
     if (startedGame) {
       return;
     }
-
-    $("#msgBottom").text("");
-
-    // Start game
-    startedGame = true;
-    UpdateGameSequence();
+    startGame();
   }
 );
 
 
-// Register an event handler for button presses..  */
+/* Register an event handler for click on bottom msg.
+ * - Ignore events when game is started...
+ * - Otherwise... Start the game.
+*/
+$("#msgBottom").click(
+  (e) => {
+    // Ignore events when game is started.
+    if (startedGame) {
+      return;
+    }
+    // Start the game.
+    startGame();
+  }
+)
+
+
+/* Register an event handler for button presses.
+ * - Ignore events when game is not started or when the sequence is playing...
+ * - Otherwise... Check user button against sequence.
+*/
 $(".btn").click(
   (e) => {
-    // Ignore clicks when game is not started or if sequence is playing.
+    // Ignore events when game is not started or if sequence is playing.
     if (!startedGame || playingSequence) {
       return;
     }
