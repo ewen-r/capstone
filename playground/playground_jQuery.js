@@ -1,12 +1,9 @@
 
 
-// let doc = document.querySelector("h1");
-// doc.classList.add("uppercase");
 
 // Get a list of elements using class querySelect.
 let elements = $("h1");
 const firstH1 = elements[0];
-// firstH1.classList.add("uppercase");
 elements.text("This text was modified from jQuery script");
 
 // Get a list of elements using id querySelect.
