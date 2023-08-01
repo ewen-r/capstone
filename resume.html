@@ -6,12 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="./assets/icons/logo.svg">
   <!-- Include Bootstrap css from CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <title>ewen-r Resume</title>
 </head>
 
 <style>
+  .profilePhoto {
+    border-radius: 50%;
+  }
+
   .skillIcon {
     height: 2rem;
     display: inline-block;
@@ -27,7 +30,6 @@
   .footerDiv,
   footer div {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 16px;
@@ -64,8 +66,7 @@
         <img src="./assets/icons/logo.svg" alt="logo" width="30" height="30"></a>
 
       <!-- Hamburger menu button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -107,14 +108,14 @@
 
   <!-- Photo and summary -->
   <div class=" px-4 my-5 text-center" id="PhotoSummary">
-    <h1 class="display-5 fw-bold text-body-emphasis">Resume: Ewen Reynolds</h1>
-    <img class="d-block mx-auto mb-2" src="./assets/images/profilePhoto01.jpg" alt="" height="250">
+    <h1 class="display-5 fw-bold text-body-emphasis">RESUMÉ</h1>
+    <img class="d-block mx-auto mb-2 profilePhoto" src="./assets/images/profilePhoto01.jpg" alt="" height="250">
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">Good morning, good afternoon and welcome...</p>
       <p class="lead mb-4">
-        My name is Ewen Reynolds and I have worked in Software Engineering for 20+ years in many areas and
+        My name is <b>Ewen Reynolds</b> and I have worked in Software Engineering for <b>20+ years</b> in many areas and
         using many different technologies.<br />
-        My most recent role is as a front-end developer on an application for managing Passive Optical Network
+        My most recent role is as a <b>front-end developer</b> on an application for managing Passive Optical Network
         devices.<br />
         I am extremely adaptable and have been relied upon to pick up new technologies, frameworks and languages on an
         as-needed
@@ -141,8 +142,7 @@
       </div>
 
       <div class="col d-flex align-items-start">
-        <img src="assets/icons/motherboard.svg" class="bi text-body-secondary flex-shrink-0 me-2 skillIcon"
-          alt="skillIcon">
+        <img src="assets/icons/motherboard.svg" class="bi text-body-secondary flex-shrink-0 me-2 skillIcon" alt="skillIcon">
         <div>
           <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Embedded / Real-Time Systems</h3>
           <p>C and C++, Debugging</p>
@@ -158,8 +158,7 @@
       </div>
 
       <div class="col d-flex align-items-start">
-        <img src="assets/icons/arrow-up-square.svg" class="bi text-body-secondary flex-shrink-0 me-2 skillIcon"
-          alt="skillIcon">
+        <img src="assets/icons/arrow-up-square.svg" class="bi text-body-secondary flex-shrink-0 me-2 skillIcon" alt="skillIcon">
         <div>
           <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Continuous Integration and SW Deployment</h3>
           <p>Jenkins, Docker, Kubernetes</p>
@@ -167,8 +166,7 @@
       </div>
 
       <div class="col d-flex align-items-start">
-        <img src="assets/icons/plus-square.svg" class="bi text-body-secondary flex-shrink-0 me-2 skillIcon"
-          alt="skillIcon">
+        <img src="assets/icons/plus-square.svg" class="bi text-body-secondary flex-shrink-0 me-2 skillIcon" alt="skillIcon">
         <div>
           <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Plus...</h3>
           <p>Experience with other languages and frameworks on an as needed basis: e.g. Python and BASH scripting,
@@ -250,8 +248,7 @@
         <li class="bulletListItem">
           Rebranding of Telewest set-top box software to Virgin Media.</li>
         <li class="bulletListItem">
-          Development of first commercial product multiplexing digital satellite services for multi-
-          dwelling applications.</li>
+          Development of first commercial product multiplexing digital satellite services for multi-dwelling applications.</li>
         <li class="bulletListItem">
           Primary engineer involved in defining working frameworks and guidelines at the outset
           of our current web-application product.</li>
@@ -301,9 +298,7 @@
 
 
   <!-- Include Bootstrap script from CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
 
