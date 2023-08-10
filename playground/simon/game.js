@@ -1,14 +1,22 @@
+/*
+  © Copyright 2023-2023 E Reynolds, Inc. All rights reserved.
+
+  This program is confidential and proprietary to E Reynolds, and
+    may not be copied, reproduced, modified, disclosed to others, published or used,
+    in whole or in part, without the express prior written permission.
+*/
+
 
 console.log("game.js is running");
 
-buttonColors = [
+const buttonColors = [
   "green",
   "yellow",
   "red",
   "blue"
 ];
 
-congratsMsgs = [
+const congratsMsgs = [
   "Here we go!",
   "Keep going!",
   "Wow! You're doing great.",
@@ -16,13 +24,13 @@ congratsMsgs = [
   "Awesome"
 ];
 
-gameSequence = [];
-startedGame = false;
-playingSequence = false;
-level = 0;
-playIndex = 0;
-checkIndex = 0;
-timer = null;
+let gameSequence = [];
+let startedGame = false;
+let playingSequence = false;
+let level = 0;
+let playIndex = 0;
+let checkIndex = 0;
+let timer = null;
 
 
 /** Update the game sequence..
@@ -33,7 +41,7 @@ timer = null;
 */
 function UpdateGameSequence() {
 
-  /* Use a timer to give the user a little breathing space before 
+  /* Use a timer to give the user a little breathing space before
    the game actually starts. */
   timer = setTimeout(() => {
     // Increment game level.
@@ -64,7 +72,7 @@ function UpdateGameSequence() {
 
 
 /** Play the game sequence.
-  * Uses a recurring timer that plays the next button in the sequence and will 
+  * Uses a recurring timer that plays the next button in the sequence and will
   * cancel itself when the sequence ends.
 */
 function playSequence() {

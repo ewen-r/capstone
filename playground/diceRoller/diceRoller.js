@@ -1,3 +1,11 @@
+/*
+  © Copyright 2023-2023 E Reynolds, Inc. All rights reserved.
+
+  This program is confidential and proprietary to E Reynolds, and
+    may not be copied, reproduced, modified, disclosed to others, published or used,
+    in whole or in part, without the express prior written permission.
+*/
+
 
 function roll() {
   // Roll dice.
@@ -9,8 +17,8 @@ function roll() {
   const dice2Element = document.getElementById("dice2");
 
   // Set images.
-  dice1Element.setAttribute("src", './assets/images/dice' + dice1 + '.png');
-  dice2Element.setAttribute("src", './assets/images/dice' + dice2 + '.png');
+  dice1Element.setAttribute("src", '../assets/images/dice' + dice1 + '.png');
+  dice2Element.setAttribute("src", '../assets/images/dice' + dice2 + '.png');
 
   // Calculate and display result message.
   let result = '😀 The result is a draw 😀';

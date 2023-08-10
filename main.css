@@ -1,3 +1,12 @@
+/*
+  © Copyright 2023-2023 E Reynolds, Inc. All rights reserved.
+
+  This program is confidential and proprietary to E Reynolds, and
+    may not be copied, reproduced, modified, disclosed to others, published or used,
+    in whole or in part, without the express prior written permission.
+*/
+
+
 /* https://colorhunt.co/palette/0719520b666a35a29f97feed */
 
 html {
@@ -35,7 +44,6 @@ footer div {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-around;
   gap: 16px;
   text-align: center;
 }

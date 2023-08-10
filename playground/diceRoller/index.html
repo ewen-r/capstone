@@ -14,19 +14,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>playground_js</title>
-  <link rel="icon" type="image/x-icon" href="./assets/icons/balloon.svg">
+  <link rel="icon" type="image/x-icon" href="../assets/icons/balloon.svg">
 
   <!-- Include Bootstrap css from CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link href="../main.css" rel="stylesheet" />
 </head>
 
 <style>
-  .flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
+  .container {
+    /* width: 40%; */
+    margin: auto;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: brown;
+  }
+
+  .result {
+    font-size: 20px;
+    font-family: 'Courier New', monospace;
+  }
+
+  .dice {
+    text-align: center;
+    display: inline-block;
+  }
+
+  .img1,
+  .img2 {
+    width: 80px;
+  }
+
+  .diceButton {
+    background-color: brown;
+    color: white;
+    border-radius: 10%;
+    width: 80px;
+    height: 80px;
+    font-family: 'Courier New', Courier, monospace;
   }
 </style>
 
@@ -36,8 +65,8 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <!-- Main logo and home button -->
-      <a class="navbar-brand" href="../playground.html">
-        <img src="./assets/icons/balloon.svg" alt="logo" width="30" height="30">
+      <a class="navbar-brand" href="../../playground.html">
+        <img src="../assets/icons/balloon.svg" alt="logo" width="30" height="30">
         Playground</a>
 
       <!-- Hamburger menu button -->
@@ -50,20 +79,20 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <!-- JS -->
           <li class="nav-item">
-            <a class="nav-link" href="./playground_js.html">
-              <img src="./assets/icons/balloon.svg" alt="bootstrap" width="16" height="16">JS</a>
+            <a class="nav-link" href="../playground_js.html">
+              <img src="../assets/icons/balloon.svg" alt="bootstrap" width="16" height="16">JS</a>
           </li>
 
           <!-- Dice Roller -->
           <li class="nav-item">
-            <a class="nav-link" href="./diceRoller/index.html">
-              <img src="./assets/icons/balloon.svg" alt="bootstrap" width="16" height="16">Dice Roller</a>
+            <a class="nav-link" href="./index.html">
+              <img src="../assets/icons/balloon.svg" alt="bootstrap" width="16" height="16">Dice Roller</a>
           </li>
 
           <!-- Simon -->
           <li class="nav-item">
-            <a class="nav-link" href="./simon/index.html">
-              <img src="./assets/icons/balloon.svg" alt="bootstrap" width="16" height="16">Simon</a>
+            <a class="nav-link" href="../simon/index.html">
+              <img src="../assets/icons/balloon.svg" alt="bootstrap" width="16" height="16">Simon</a>
           </li>
 
         </ul>
@@ -71,29 +100,28 @@
     </div>
   </nav>
 
-  <!-- Page under construction -->
-  <div class="flex-container">
-    <div class="card" style="width: 50vw;">
-      <img src="./assets/images/backdrop02.jpg" class="card-img-top" alt="card image">
-      <div class="card-body">
-        <h4 class="card-title">JavaScript Playground</h4>
-        <p class="card-text">
-          Please use the menu bar to navigate to something more interesting.</p>
-      </div>
+  <div class="container">
+    <h1>Dice Roller</h1>
+
+    <button id="rollDiceButton" class="diceButton">Roll dice</button>
+
+    <h2 id="resultMsg" class="result">Ready to play</h2>
+
+    <div class="dice">
+      <p>Player 1</p>
+      <img id="dice1" class="img1" src="../assets/images/dice6.png" alt="ready">
+    </div>
+
+    <div class="dice">
+      <p>Player 2</p>
+      <img id="dice2" class="img2" src="../assets/images/dice6.png" alt="ready">
     </div>
   </div>
 
   <!-- Include Bootstrap script from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  <script src="./playground_js.js"></script>
+  <script src="./diceRoller.js"></script>
 
 </body>
-
-<footer>
-  <div class="footerDiv">
-    <a href="#body">Jump To Top Of Page</a>
-  </div>
-  <p class="footerCopyright">Copyright 2023 Ewen Reynolds all rights reserved</p>
-</footer>
 
 </html>
